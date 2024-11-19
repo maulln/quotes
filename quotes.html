@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote of the Day</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-left"><b>
+        Kutipan
+    </b></div>
+    <div class="navbar-right">
+      <div class="mode-toggle" id="mode-toggle">
+        <i class="bi bi-brightness-high"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="quote-box">
+      <div class="quote-header">
+        <h2>The quotes from global elites</h2>
+      </div>
+      <div class="quote-content">
+        <p id="quote-text">Click "Next Quote" to see a quote</p>
+        <p id="quote-author">— Author </p>
+      </div>
+      <hr>
+      <div class="icons-container">
+        <div class="icon-container" id="voice-icon">
+          <i class="fas fa-volume-up"></i>
+        </div>
+        <div class="icon-container" id="translate-icon">
+          <i class="fas fa-language"></i>
+        </div>
+        <div class="icon-container" id="whatsapp-icon">
+          <a href="https://wa.me/6281385191193" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+        <div class="next-quote">
+          <button class="next-btn" onclick="nextQuote()"> <b>Next Quote</b></button>
+        </div>
+      </div>
+      
+      <audio id="audio-quote-1-id" src="Satria-1 - isolated.mp3"></audio>
+      <audio id="audio-quote-1-en" src="Satria-1 - isolated.mp3"></audio>
+
+      <audio id="audio-quote-2-id" src="zyyyad-1 - isolated.mp3"></audio>
+      <audio id="audio-quote-2-en" src="zyyyad-1 - isolated.mp3"></audio>
+
+      <audio id="audio-quote-3-id" src="gntaa-1 - isolated.mp3"></audio>
+      <audio id="audio-quote-3-en" src="gntaa-1 - isolated.mp3"></audio>
+
+      <audio id="audio-quote-4-id" src="yugha-1 - isolated.mp3"></audio>
+      <audio id="audio-quote-4-en" src="yugha-1 - isolated.mp3"></audio>
+
+      <audio id="audio-quote-5-id" src="maulln-1 - isolated.mp3"></audio>
+      <audio id="audio-quote-5-en" src="maulln-1 - isolated.mp3"></audio>
+
+      <audio id="audio-quote-6-id" src="satria-2 - isolated.mp3"></audio>
+      <audio id="audio-quote-6-en" src="satria-2 - isolated.mp3"></audio>
+
+      <audio id="audio-quote-7-id" src="maull-4 - isolated.mp3"></audio>
+      <audio id="audio-quote-7-en" src="maull-4 - isolated.mp3"></audio>
+
+      <audio id="audio-quote-8-id" src="gntaa-2 (1).mp3"></audio>
+      <audio id="audio-quote-8-en" src="gntaa-2 (1).mp3"></audio>
+
+      <audio id="audio-quote-9-id" src="satria-3_out.mp3"></audio>
+      <audio id="audio-quote-9-en" src="satria-3_out.mp3"></audio>
+
+      <audio id="audio-quote-10-id" src="gntaa-3.mp3"></audio>
+      <audio id="audio-quote-10-en" src="gntaa-3.mp3"></audio>
+
+      <audio id="audio-quote-11-id" src="maull-3 - isolated.mp3"></audio>
+      <audio id="audio-quote-11-en" src="maull-3 - isolated.mp3"></audio>
+
+      <audio id="audio-quote-12-id" src="gntaa-4.mp3"></audio>
+      <audio id="audio-quote-12-en" src="gntaa-4.mp3"></audio>
+
+      <audio id="audio-quote-13-id" src="satria-4_out.mp3"></audio>
+      <audio id="audio-quote-13-en" src="satria-4_out.mp3"></audio>
+
+      <audio id="audio-quote-14-id" src="gntaa-5.mp3"></audio>
+      <audio id="audio-quote-14-en" src="gntaa-5.mp3"></audio>
+
+      <audio id="audio-quote-15-id" src="maull-2 - isolated.mp3"></audio>
+      <audio id="audio-quote-15-en" src="maull-2 - isolated.mp3"></audio>
+
+      <audio id="audio-quote-16-id" src="gntaa-6_out.mp3"></audio>
+      <audio id="audio-quote-16-en" src="gntaa-6_out.mp3"></audio>
+
+      <audio id="audio-quote-17-id" src="satria-5_out.mp3"></audio>
+      <audio id="audio-quote-17-en" src="satria-5_out.mp3"></audio>
+
+    </div>
+  </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <button id="music-toggle-footer" class="btn btn-link">
+                <i class="bi bi-music-note-beamed"></i> <!-- Ikon musik dari Bootstrap Icons -->
+            </button>
+            <div class="footer-text">
+                <b>
+                &copy; Maulln
+                </b>
+            </div>
+        </div>
+    </footer>
+
+    <div id="music-dropdown-footer" style="display: none;">
+        <ul>
+            <li><a href="#" onclick="stopMusic()">Stop Music</a></li>
+            <li><a href="#" onclick="resumeMusic()">Lanjut Memutar</a></li>
+            <li><a href="#" onclick="selectMusic(1)">Mr Loverman - Montgomery R.</a></li>
+            <li><a href="#" onclick="selectMusic(2)">Walking In The Wind - One Direction</a></li>
+            <li><a href="#" onclick="selectMusic(3)">Wish You Were Here - Neck Deep</a></li>
+            <li><a href="#" onclick="selectMusic(4)">Satu Bulan - Bernadya</a></li>
+        </ul>
+    </div>
+
+    </div>
+    <audio id="music-1" src="Mr Loverman - Ricky Montgomery.mp3"></audio>
+    <audio id="music-2" src="One Direction  Walking In The Wind.mp3"></audio>
+    <audio id="music-3" src="Wish You Were Here - Neck Deep.mp3"></audio>
+    <audio id="music-4" src="Satu Bulan  Bernadya.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
